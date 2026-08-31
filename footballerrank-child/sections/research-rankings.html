@@ -1,0 +1,48 @@
+<style>
+  .fr-research{background:#fff}
+  .fr-research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .fr-article{overflow:hidden;border:1px solid var(--fr-line);border-radius:var(--fr-radius);background:#fff;transition:transform .35s var(--fr-ease),box-shadow .35s var(--fr-ease),border-color .35s}
+  .fr-article:hover{transform:translateY(-7px);border-color:var(--fr-lime);box-shadow:var(--fr-shadow)}
+  .fr-article__media{position:relative;display:grid;place-items:center;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(145deg,#0d2134,#07111f)}
+  .fr-article__media:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 18%,rgba(183,243,74,.13) 50%,transparent 70%);transform:translateX(-100%);transition:transform .65s var(--fr-ease)}
+  .fr-article:hover .fr-article__media:before{transform:translateX(100%)}
+  .fr-article__chart{display:flex;align-items:flex-end;gap:7px;height:72px}
+  .fr-article__chart i{display:block;width:9px;border-radius:3px 3px 0 0;background:var(--fr-lime);opacity:.85}
+  .fr-article__chart i:nth-child(1){height:28%}.fr-article__chart i:nth-child(2){height:48%}.fr-article__chart i:nth-child(3){height:39%}.fr-article__chart i:nth-child(4){height:72%}.fr-article__chart i:nth-child(5){height:58%}.fr-article__chart i:nth-child(6){height:100%}
+  .fr-article__body{padding:20px}
+  .fr-article__meta{display:flex;justify-content:space-between;gap:12px;margin-bottom:11px;color:var(--fr-muted);font-size:.64rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+  .fr-article__meta b{color:#78a519}
+  .fr-article h3{margin:0 0 9px;font-size:1.12rem;line-height:1.25}
+  .fr-article p{margin:0 0 17px;color:var(--fr-muted);font-size:.82rem;line-height:1.55}
+  .fr-article__link{color:var(--fr-ink);font-size:.68rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+  .fr-article__link span{display:inline-block;margin-left:6px;transition:transform .3s var(--fr-ease)}
+  .fr-article:hover .fr-article__link span{transform:translateX(5px)}
+  @media(max-width:850px){.fr-research-grid{grid-template-columns:1fr 1fr}.fr-article:last-child{grid-column:1/-1}}
+  @media(max-width:620px){.fr-research-grid{grid-template-columns:1fr}.fr-article:last-child{grid-column:auto}}
+</style>
+
+<section class="fr-section fr-research">
+  <div class="fr-container">
+    <header class="fr-section-heading">
+      <h2 class="fr-display">Research-Backed Rankings</h2>
+      <a class="fr-link" href="/research/">View all research <span>&rarr;</span></a>
+    </header>
+
+    <div class="fr-research-grid">
+      <a class="fr-article fr-reveal" href="/research/how-we-rank-players/">
+        <div class="fr-article__media"><span class="fr-article__chart"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+        <div class="fr-article__body"><div class="fr-article__meta"><b>Methodology</b><span>8 min read</span></div><h3>How We Rank Football Players</h3><p>Inside the scoring model that combines performance, impact, longevity and era context.</p><span class="fr-article__link">Read analysis <span>&rarr;</span></span></div>
+      </a>
+
+      <a class="fr-article fr-reveal" href="/research/modern-midfielder/">
+        <div class="fr-article__media"><span class="fr-article__chart"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+        <div class="fr-article__body"><div class="fr-article__meta"><b>Analysis</b><span>6 min read</span></div><h3>The Rise of the Modern Midfielder</h3><p>How progressive passing, pressing and positional intelligence reshaped the role.</p><span class="fr-article__link">Read analysis <span>&rarr;</span></span></div>
+      </a>
+
+      <a class="fr-article fr-reveal" href="/research/predicting-greatness/">
+        <div class="fr-article__media"><span class="fr-article__chart"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+        <div class="fr-article__body"><div class="fr-article__meta"><b>Data Study</b><span>10 min read</span></div><h3>What Statistics Really Predict Greatness?</h3><p>Separating meaningful indicators from noise across leagues, eras and positions.</p><span class="fr-article__link">Read analysis <span>&rarr;</span></span></div>
+      </a>
+    </div>
+  </div>
+</section>
