@@ -1,0 +1,41 @@
+<style>
+  .fr-legends{position:relative;overflow:hidden;padding:72px 0;background:linear-gradient(110deg,#07111f 0%,#0b1620 55%,#211b0c 100%);color:#fff}
+  .fr-legends:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 45%,rgba(215,168,62,.14),transparent 34%);pointer-events:none}
+  .fr-legends__grid{position:relative;z-index:1;display:grid;grid-template-columns:.85fr 1.5fr;gap:42px;align-items:center}
+  .fr-legends__intro h2{margin:4px 0 16px;color:#d7a83e!important;font-size:clamp(3rem,5vw,5.3rem);line-height:.9}
+  .fr-legends__intro p:not(.fr-eyebrow){max-width:410px;color:#c6d0db}
+  .fr-legends__intro .fr-button{margin-top:18px;border-color:#d7a83e;background:transparent;color:#d7a83e}
+  .fr-legends__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .fr-legend{position:relative;min-height:300px;overflow:hidden;border:1px solid rgba(215,168,62,.25);border-radius:8px;background:linear-gradient(160deg,#152231,#080f18);transition:transform .35s ease,border-color .35s ease}
+  .fr-legend:hover{transform:translateY(-7px);border-color:#d7a83e}
+  .fr-legend:before{content:attr(data-rank);position:absolute;right:12px;top:12px;color:rgba(215,168,62,.13);font:500 7rem/1 Impact}
+  .fr-legend__content{position:absolute;inset:auto 0 0;padding:22px;background:linear-gradient(transparent,rgba(2,8,14,.96))}
+  .fr-legend__rank{color:#d7a83e;font:500 2.5rem/1 Impact}
+  .fr-legend h3{margin:7px 0 3px;color:#fff!important;font-size:1.12rem;text-transform:uppercase}
+  .fr-legend p{margin:0;color:#d7a83e;font-size:.66rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+  @media(max-width:900px){.fr-legends__grid{grid-template-columns:1fr}.fr-legends__cards{grid-template-columns:repeat(3,minmax(220px,1fr));overflow-x:auto;padding-bottom:12px}}
+  @media(max-width:720px){.fr-legends{padding:56px 0}.fr-legends__cards{display:flex;scroll-snap-type:x mandatory}.fr-legend{min-width:78vw;scroll-snap-align:start}}
+</style>
+
+<section class="fr-legends">
+  <div class="fr-container fr-legends__grid">
+    <div class="fr-legends__intro fr-reveal">
+      <p class="fr-eyebrow">History &amp; Legacy</p>
+      <h2 class="fr-display">All-Time Greats</h2>
+      <p>Honouring the legends who shaped the beautiful game across eras and generations.</p>
+      <a class="fr-button" href="/rankings/all-time/">Explore all-time rankings <span>&rarr;</span></a>
+    </div>
+
+    <div class="fr-legends__cards">
+      <a class="fr-legend fr-reveal" data-rank="01" href="/players/pele/">
+        <div class="fr-legend__content"><span class="fr-legend__rank">01</span><h3>Pel&eacute;</h3><p>The King of Football</p></div>
+      </a>
+      <a class="fr-legend fr-reveal" data-rank="02" href="/players/diego-maradona/">
+        <div class="fr-legend__content"><span class="fr-legend__rank">02</span><h3>Diego Maradona</h3><p>The Golden Boy</p></div>
+      </a>
+      <a class="fr-legend fr-reveal" data-rank="03" href="/players/zinedine-zidane/">
+        <div class="fr-legend__content"><span class="fr-legend__rank">03</span><h3>Zin&eacute;dine Zidane</h3><p>Midfield Maestro</p></div>
+      </a>
+    </div>
+  </div>
+</section>
