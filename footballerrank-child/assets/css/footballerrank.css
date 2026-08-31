@@ -37,7 +37,7 @@
 .fr-hero__media::before{content:"01";position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);font:500 19rem/1 Impact;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.12)}
 .fr-hero__media img{position:relative;z-index:1;width:100%;height:100%;max-height:650px;object-fit:contain;object-position:center bottom}
 .fr-rank-panel{position:relative;z-index:2;padding:26px;border:1px solid rgba(255,255,255,.17);border-radius:var(--fr-radius);background:rgba(4,13,23,.78);backdrop-filter:blur(14px)}
-.fr-rank-panel>span{font-size:.7rem;font-weight:900;text-transform:uppercase}.fr-rank-panel>strong{display:block;color:var(--fr-lime);font:500 4.6rem/1 Impact}.fr-rank-panel h2{margin:18px 0 0;font:500 1.5rem/1 Impact;text-transform:uppercase}.fr-rank-panel p{margin:5px 0 18px;color:var(--fr-lime);font-size:.7rem;font-weight:900;text-transform:uppercase}
+.fr-rank-panel>span{font-size:.7rem;font-weight:900;text-transform:uppercase}.fr-rank-panel>strong{display:block;color:var(--fr-lime);font:500 4.6rem/1 Impact}.fr-rank-panel h2{margin:18px 0 0;color:#fff!important;font:500 1.5rem/1 Impact;text-transform:uppercase}.fr-rank-panel p{margin:5px 0 18px;color:var(--fr-lime);font-size:.7rem;font-weight:900;text-transform:uppercase}
 .fr-score{display:grid;place-items:center;width:114px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--fr-navy) 56%,transparent 57%),conic-gradient(var(--fr-lime) 0 85%,rgba(255,255,255,.1) 85%)}
 .fr-score b{font-size:1.55rem}
 
