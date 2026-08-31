@@ -1,0 +1,44 @@
+<style>
+  .fr-comparisons{background:#fff}
+  .fr-comparison-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .fr-matchup{position:relative;overflow:hidden;border:1px solid var(--fr-line);border-radius:var(--fr-radius);background:#fff;transition:transform .35s var(--fr-ease),box-shadow .35s var(--fr-ease),border-color .35s}
+  .fr-matchup:hover{transform:translateY(-7px);border-color:var(--fr-lime);box-shadow:var(--fr-shadow)}
+  .fr-matchup__visual{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:220px;background:linear-gradient(135deg,var(--fr-navy),var(--fr-navy-2))}
+  .fr-matchup__player{display:flex;align-items:flex-end;padding:22px 18px;background:radial-gradient(circle at 50% 25%,rgba(183,243,74,.12),transparent 52%)}
+  .fr-matchup__player:last-child{justify-content:flex-end;text-align:right;border-left:1px solid rgba(255,255,255,.1)}
+  .fr-matchup__player span{color:#fff;font:500 1.25rem/1 Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;text-transform:uppercase}
+  .fr-matchup__vs{position:absolute;z-index:2;left:50%;top:50%;display:grid;place-items:center;width:48px;aspect-ratio:1;transform:translate(-50%,-50%);border:4px solid var(--fr-navy);border-radius:50%;background:var(--fr-lime);color:var(--fr-navy);font-size:.72rem;font-weight:900}
+  .fr-matchup__body{padding:20px}
+  .fr-matchup__body h3{margin:0 0 7px;font-size:1rem}
+  .fr-matchup__body p{min-height:44px;margin:0 0 17px;color:var(--fr-muted);font-size:.82rem}
+  .fr-matchup__link{display:flex;justify-content:space-between;padding-top:14px;border-top:1px solid var(--fr-line);color:var(--fr-ink);font-size:.69rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+  .fr-matchup:hover .fr-matchup__link{color:#6b940f}
+  @media(max-width:900px){.fr-comparison-grid{grid-template-columns:1fr 1fr}.fr-matchup:last-child{grid-column:1/-1}}
+  @media(max-width:720px){.fr-comparison-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}.fr-matchup,.fr-matchup:last-child{min-width:84vw;scroll-snap-align:start}}
+</style>
+
+<section class="fr-section fr-comparisons">
+  <div class="fr-container">
+    <header class="fr-section-heading">
+      <h2 class="fr-display">Player Comparisons</h2>
+      <a class="fr-link" href="/comparisons/">Compare players <span>&rarr;</span></a>
+    </header>
+
+    <div class="fr-comparison-grid">
+      <a class="fr-matchup fr-reveal" href="/comparisons/haaland-vs-mbappe/">
+        <div class="fr-matchup__visual"><div class="fr-matchup__player"><span>Haaland</span></div><div class="fr-matchup__player"><span>Mbapp&eacute;</span></div><b class="fr-matchup__vs">VS</b></div>
+        <div class="fr-matchup__body"><h3>Erling Haaland vs Kylian Mbapp&eacute;</h3><p>Who is the defining striker of football's new generation?</p><span class="fr-matchup__link">View comparison <b>&rarr;</b></span></div>
+      </a>
+
+      <a class="fr-matchup fr-reveal" href="/comparisons/messi-vs-ronaldo/">
+        <div class="fr-matchup__visual"><div class="fr-matchup__player"><span>Messi</span></div><div class="fr-matchup__player"><span>Ronaldo</span></div><b class="fr-matchup__vs">VS</b></div>
+        <div class="fr-matchup__body"><h3>Lionel Messi vs Cristiano Ronaldo</h3><p>The defining numbers behind football's greatest modern rivalry.</p><span class="fr-matchup__link">View comparison <b>&rarr;</b></span></div>
+      </a>
+
+      <a class="fr-matchup fr-reveal" href="/comparisons/bellingham-vs-pedri/">
+        <div class="fr-matchup__visual"><div class="fr-matchup__player"><span>Bellingham</span></div><div class="fr-matchup__player"><span>Pedri</span></div><b class="fr-matchup__vs">VS</b></div>
+        <div class="fr-matchup__body"><h3>Jude Bellingham vs Pedri</h3><p>Two elite midfield profiles measured across impact and control.</p><span class="fr-matchup__link">View comparison <b>&rarr;</b></span></div>
+      </a>
+    </div>
+  </div>
+</section>
