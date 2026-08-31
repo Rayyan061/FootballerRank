@@ -1,0 +1,27 @@
+<style>
+  .fr-trust{position:relative;overflow:hidden;background:#0a1829;color:#fff;border-top:1px solid rgba(183,243,74,.16);border-bottom:1px solid rgba(255,255,255,.08)}
+  .fr-trust:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 50%,rgba(183,243,74,.1),transparent 26%);pointer-events:none}
+  .fr-trust__grid{position:relative;display:grid;grid-template-columns:1.65fr repeat(3,.72fr);align-items:center;min-height:150px}
+  .fr-trust__intro{display:flex;align-items:center;gap:18px;padding:30px 34px 30px 0}
+  .fr-trust__shield{display:grid;place-items:center;flex:0 0 58px;aspect-ratio:1;border:1px solid var(--fr-lime);clip-path:polygon(50% 0,94% 17%,86% 76%,50% 100%,14% 76%,6% 17%);color:var(--fr-lime);font:500 1.1rem/1 Impact}
+  .fr-trust__intro h2{margin:0 0 6px;color:#fff!important;font:500 1.28rem/1.1 Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;letter-spacing:.03em;text-transform:uppercase}
+  .fr-trust__intro p{margin:0;color:#9eb0c2;font-size:.75rem;line-height:1.5}
+  .fr-trust__stat{display:grid;place-items:center;align-content:center;min-height:78px;padding:16px;text-align:center;border-left:1px solid rgba(255,255,255,.12)}
+  .fr-trust__stat strong{display:block;margin-bottom:7px;color:#fff;font-size:1.3rem;line-height:1}
+  .fr-trust__stat span{color:#9eb0c2;font-size:.62rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+  .fr-trust__stat:hover strong{color:var(--fr-lime)}
+  @media(max-width:850px){.fr-trust__grid{grid-template-columns:repeat(3,1fr)}.fr-trust__intro{grid-column:1/-1;padding-right:0}.fr-trust__stat{border-top:1px solid rgba(255,255,255,.1)}}
+  @media(max-width:560px){.fr-trust__grid{grid-template-columns:1fr}.fr-trust__intro{align-items:flex-start}.fr-trust__stat{min-height:auto;border-left:0;padding:19px;border-top:1px solid rgba(255,255,255,.1)}}
+</style>
+
+<section class="fr-trust" aria-label="FootballerRank editorial standards">
+  <div class="fr-container fr-trust__grid">
+    <div class="fr-trust__intro fr-reveal">
+      <span class="fr-trust__shield">FR</span>
+      <div><h2>Trusted. Transparent. Independent.</h2><p>Research-led rankings with a clear methodology and accountable editorial standards.</p></div>
+    </div>
+    <div class="fr-trust__stat fr-reveal"><strong>50+</strong><span>Performance data points</span></div>
+    <div class="fr-trust__stat fr-reveal"><strong>ERA</strong><span>Context adjusted</span></div>
+    <div class="fr-trust__stat fr-reveal"><strong>100%</strong><span>Independent analysis</span></div>
+  </div>
+</section>
