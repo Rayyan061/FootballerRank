@@ -1,0 +1,41 @@
+<style>
+  .fr-featured{background:#f5f7f8}
+  .fr-profile-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .fr-profile{position:relative;display:block;min-height:340px;overflow:hidden;border-radius:var(--fr-radius);background:linear-gradient(155deg,#14263a 0%,#07111f 68%);box-shadow:0 12px 32px rgba(7,17,31,.1);transition:transform .4s var(--fr-ease),box-shadow .4s var(--fr-ease)}
+  .fr-profile:before{content:attr(data-number);position:absolute;right:-5px;top:5px;color:rgba(255,255,255,.055);font:500 9rem/1 Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif}
+  .fr-profile:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 32%,rgba(183,243,74,.13),transparent 35%),linear-gradient(transparent 46%,rgba(2,8,14,.96) 92%)}
+  .fr-profile:hover{transform:translateY(-8px);box-shadow:0 22px 50px rgba(7,17,31,.22)}
+  .fr-profile__mark{position:absolute;z-index:1;left:50%;top:40%;transform:translate(-50%,-50%);color:rgba(255,255,255,.09);font:500 3rem/1 Impact}
+  .fr-profile__content{position:absolute;z-index:2;inset:auto 0 0;padding:22px}
+  .fr-profile__position{display:block;margin-bottom:7px;color:var(--fr-lime);font-size:.65rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+  .fr-profile h3{margin:0 0 8px;color:#fff!important;font-size:1.15rem;text-transform:uppercase}
+  .fr-profile p{margin:0;color:#aebbc8;font-size:.78rem;line-height:1.45}
+  .fr-profile__arrow{position:absolute;z-index:3;right:18px;bottom:20px;color:var(--fr-lime);font-weight:900;transition:transform .3s var(--fr-ease)}
+  .fr-profile:hover .fr-profile__arrow{transform:translateX(5px)}
+  @media(max-width:960px){.fr-profile-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:720px){.fr-profile-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}.fr-profile{min-width:78vw;scroll-snap-align:start}}
+</style>
+
+<section class="fr-section fr-featured">
+  <div class="fr-container">
+    <header class="fr-section-heading">
+      <h2 class="fr-display">Featured Player Profiles</h2>
+      <a class="fr-link" href="/players/">Browse all players <span>&rarr;</span></a>
+    </header>
+
+    <div class="fr-profile-grid">
+      <a class="fr-profile fr-reveal" data-number="09" href="/players/kylian-mbappe/">
+        <span class="fr-profile__mark">FR</span><div class="fr-profile__content"><span class="fr-profile__position">Elite Forward</span><h3>Kylian Mbapp&eacute;</h3><p>Explosive pace, elite finishing and decisive big-game impact.</p></div><span class="fr-profile__arrow">&rarr;</span>
+      </a>
+      <a class="fr-profile fr-reveal" data-number="10" href="/players/jude-bellingham/">
+        <span class="fr-profile__mark">FR</span><div class="fr-profile__content"><span class="fr-profile__position">Complete Midfielder</span><h3>Jude Bellingham</h3><p>A modern midfielder combining control, progression and goals.</p></div><span class="fr-profile__arrow">&rarr;</span>
+      </a>
+      <a class="fr-profile fr-reveal" data-number="04" href="/players/virgil-van-dijk/">
+        <span class="fr-profile__mark">FR</span><div class="fr-profile__content"><span class="fr-profile__position">World-Class Defender</span><h3>Virgil van Dijk</h3><p>Authority, recovery speed and commanding defensive leadership.</p></div><span class="fr-profile__arrow">&rarr;</span>
+      </a>
+      <a class="fr-profile fr-reveal" data-number="01" href="/players/alisson-becker/">
+        <span class="fr-profile__mark">FR</span><div class="fr-profile__content"><span class="fr-profile__position">Elite Goalkeeper</span><h3>Alisson Becker</h3><p>Shot stopping, distribution and composure under pressure.</p></div><span class="fr-profile__arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
