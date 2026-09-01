@@ -34,6 +34,16 @@ function footballerrank_child_assets(): void {
             true
         );
     }
+
+    if (is_author()) {
+        $author_css_path = get_stylesheet_directory() . '/assets/css/author-page.css';
+        wp_enqueue_style(
+            'footballerrank-author-page',
+            get_stylesheet_directory_uri() . '/assets/css/author-page.css',
+            ['footballerrank-child'],
+            file_exists($author_css_path) ? (string) filemtime($author_css_path) : $version
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'footballerrank_child_assets', 20);
 
