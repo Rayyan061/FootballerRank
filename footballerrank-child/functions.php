@@ -16,6 +16,22 @@ function footballerrank_child_assets(): void {
         $version,
         true
     );
+
+    if (is_singular('post')) {
+        wp_enqueue_style(
+            'footballerrank-single-post',
+            get_stylesheet_directory_uri() . '/assets/css/single-post.css',
+            ['footballerrank-child'],
+            $version
+        );
+        wp_enqueue_script(
+            'footballerrank-single-post',
+            get_stylesheet_directory_uri() . '/assets/js/single-post.js',
+            [],
+            $version,
+            true
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'footballerrank_child_assets', 20);
 
