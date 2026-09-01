@@ -18,17 +18,19 @@ function footballerrank_child_assets(): void {
     );
 
     if (is_singular('post')) {
+        $single_css_path = get_stylesheet_directory() . '/assets/css/single-post.css';
+        $single_js_path  = get_stylesheet_directory() . '/assets/js/single-post.js';
         wp_enqueue_style(
             'footballerrank-single-post',
             get_stylesheet_directory_uri() . '/assets/css/single-post.css',
             ['footballerrank-child'],
-            $version
+            file_exists($single_css_path) ? (string) filemtime($single_css_path) : $version
         );
         wp_enqueue_script(
             'footballerrank-single-post',
             get_stylesheet_directory_uri() . '/assets/js/single-post.js',
             [],
-            $version,
+            file_exists($single_js_path) ? (string) filemtime($single_js_path) : $version,
             true
         );
     }
