@@ -5,6 +5,7 @@ get_header();
 
 while (have_posts()) : the_post();
     $author_id   = (int) get_the_author_meta('ID');
+    $author_name = 'Adnan Ahmed';
     $categories  = get_the_category();
     $primary_cat = $categories ? $categories[0] : null;
     $word_count  = str_word_count(wp_strip_all_tags((string) get_the_content()));
@@ -13,15 +14,10 @@ while (have_posts()) : the_post();
 <main id="primary" class="fr-single">
     <header class="fr-post-hero">
         <div class="fr-post-container">
-            <nav class="fr-breadcrumb" aria-label="Breadcrumb">
-                <a href="<?php echo esc_url(home_url('/')); ?>">Home</a><span>/</span>
-                <?php if ($primary_cat) : ?><a href="<?php echo esc_url(get_category_link($primary_cat)); ?>"><?php echo esc_html($primary_cat->name); ?></a><span>/</span><?php endif; ?>
-                <span aria-current="page"><?php the_title(); ?></span>
-            </nav>
             <?php if ($primary_cat) : ?><a class="fr-post-category" href="<?php echo esc_url(get_category_link($primary_cat)); ?>"><?php echo esc_html($primary_cat->name); ?></a><?php endif; ?>
             <h1><?php the_title(); ?></h1>
             <div class="fr-post-meta">
-                <span class="fr-post-author-mini"><?php echo get_avatar($author_id, 42); ?><span>By <a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>"><?php the_author(); ?></a></span></span>
+                <span class="fr-post-author-mini"><?php echo get_avatar($author_id, 42); ?><span>By <a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>"><?php echo esc_html($author_name); ?></a></span></span>
                 <span>Updated <?php echo esc_html(get_the_modified_date()); ?></span>
                 <span><?php echo esc_html($read_time); ?> min read</span>
             </div>
@@ -50,7 +46,7 @@ while (have_posts()) : the_post();
 
             <section class="fr-author-box" aria-labelledby="fr-author-title">
                 <?php echo get_avatar($author_id, 112); ?>
-                <div><span>About the author</span><h2 id="fr-author-title"><a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>"><?php the_author(); ?></a></h2><p><?php echo esc_html(get_the_author_meta('description', $author_id)); ?></p><a class="fr-author-link" href="<?php echo esc_url(get_author_posts_url($author_id)); ?>">View author profile &rarr;</a></div>
+                <div><span>About the author</span><h2 id="fr-author-title"><a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>"><?php echo esc_html($author_name); ?></a></h2><p><?php echo esc_html(get_the_author_meta('description', $author_id)); ?></p><a class="fr-author-link" href="<?php echo esc_url(get_author_posts_url($author_id)); ?>">View author profile &rarr;</a></div>
             </section>
 
             <?php
